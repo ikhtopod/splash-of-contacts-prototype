@@ -19,6 +19,18 @@ config/name="splash-of-contacts"
 run/main_scene="res://Scenes/Demo.tscn"
 config/icon="res://icon.png"
 
+[debug]
+
+settings/fps/force_fps=60
+
+[display]
+
+window/vsync/use_vsync=false
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
