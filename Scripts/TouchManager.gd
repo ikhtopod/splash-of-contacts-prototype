@@ -20,6 +20,7 @@ class TouchEventStat:
 	
 	func SetPosition(position: Vector2) -> void:
 		m_position = position
+	
 
 # Класс, который хранит прикосновения к экрану,
 # а также, ограничивает количество прикосновений
@@ -50,7 +51,7 @@ class MultiTouch:
 		
 		for touch in m_touch:
 			if touch.GetPressed():
-				result.append(touch)
+				result.push_back(touch)
 		
 		return result
 
