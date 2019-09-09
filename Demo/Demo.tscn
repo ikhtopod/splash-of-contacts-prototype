@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Demo/Demo.gd" type="Script" id=1]
 [ext_resource path="res://Demo/energy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Demo/zone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Demo/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://Demo/player.png" type="Texture" id=6]
 
 [node name="Demo" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,6 +24,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Control"]
+editor/display_folded = true
 margin_right = 475.0
 margin_bottom = 138.0
 
@@ -169,3 +172,9 @@ margin_bottom = 105.0
 text = "[position]"
 align = 1
 valign = 1
+
+[node name="TouchScreenButtonExit" type="TouchScreenButton" parent="Control"]
+position = Vector2( 935.078, 516.942 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 6 )
+[connection signal="pressed" from="Control/TouchScreenButtonExit" to="." method="_on_TouchScreenButton_pressed"]
