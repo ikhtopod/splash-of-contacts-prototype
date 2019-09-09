@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="splash-of-contacts"
-run/main_scene="res://Scenes/Demo.tscn"
+run/main_scene="res://Demo/Demo.tscn"
 config/icon="res://icon.png"
 
 [debug]

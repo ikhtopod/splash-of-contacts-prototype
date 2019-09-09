@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Resources/Demo/energy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Resources/Demo/zone.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Resources/Demo/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Demo/energy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Demo/zone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Demo/player.tscn" type="PackedScene" id=3]
 
 [node name="Demo" type="Node2D"]
 
