@@ -2,12 +2,20 @@ extends Node
 
 
 class TouchEventStat:
+	var m_index: int setget SetIndex, GetIndex
 	var m_pressed: bool setget SetPressed, IsPressed
 	var m_position: Vector2 setget SetPosition, GetPosition
 	
-	func _init(pressed: bool = false, position := Vector2()) -> void:
+	func _init(index: int = 0, pressed: bool = false, position := Vector2()) -> void:
+		m_index = index
 		m_pressed = pressed
 		m_position = position
+	
+	func GetIndex() -> int:
+		return m_index
+	
+	func SetIndex(index: int) -> void:
+		m_index = index
 	
 	func IsPressed() -> bool:
 		return m_pressed
@@ -30,8 +38,8 @@ class MultiTouch:
 	var m_touch: Array
 	
 	func _init() -> void:
-		for i in range(MAX_TOUCH):
-			m_touch.push_back(TouchEventStat.new())
+		for index in range(MAX_TOUCH):
+			m_touch.push_back(TouchEventStat.new(index))
 	
 	# Получить размер внутреннего массива MultiTouch
 	func Size() -> int:
