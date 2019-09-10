@@ -58,7 +58,7 @@ class MultiTouch:
 		var result: Array = []
 		
 		for touch in m_touch:
-			if touch.GetPressed():
+			if touch.IsPressed():
 				result.push_back(touch)
 		
 		return result
